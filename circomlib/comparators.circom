@@ -1,6 +1,6 @@
 pragma circom 2.0.0;
 
-include "bitsum.circom";
+include "binsum.circom";
 include "bitify.circom";
 
 template IsZero(){
@@ -48,7 +48,7 @@ template lessThan(n){
 
     component n2b = Num2Bits(n+1);
 
-    n2b.in <== in[0]+(1<<n)-in[1]  //added 2^^n to check if underflow 
+    n2b.in <== in[0]+(1<<n)-in[1] ; //added 2^^n to check if underflow 
 
     out <== 1-n2b.out[n];//checking for nth place
 }

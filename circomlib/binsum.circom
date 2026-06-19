@@ -28,7 +28,7 @@ template BinSum(n,ops){
     e2 = 1;
     for (k=0; k<n ;k++){
         for(j=0; j<ops; j++){
-            lin += in[j][k]*e2
+            lin += in[j][k]*e2;
         }
         e2 = e2+ e2;  
     }
